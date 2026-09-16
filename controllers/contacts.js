@@ -43,9 +43,47 @@ const getContactById = async (req, res) => {
     }
 };
 
+// Create a new contact
+const createContact = async (req, res) => {
+    try {
+        const { firstName, lastName, email, favoriteColor, birthday } = req.body;
+
+        if (!firstName || !lastName || !email || !favoriteColor || !birthday) {
+            return res.status(400).json({
+                error: "All fields are required"
+            });
+        }
+
+        const db = mongodb.getDatabase();
+
+        const contact = {
+            firstName,
+            lastName,
+            email,
+            favoriteColor,
+            birthday
+        };
+
+        const result = await db
+            .collection("contacts")
+            .insertOne(contact);
+
+        res.status(201).json({
+            id: result.insertedId
+        });
+
+    } catch (error) {
+        console.error("Error creating contact:", error);
+        res.status(500).json({
+            error: "Failed to create contact"
+        });
+    }
+};
+
 
 
 module.exports = {
     getAllContacts,
-    getContactById
+    getContactById,
+    createContact
 };

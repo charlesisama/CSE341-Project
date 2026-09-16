@@ -9,3 +9,16 @@ GET http://localhost:3000/contacts
 
 //Get contact by Id - local
 GET http://localhost:3000/contacts/6aa0d5033cdcb7a7405cc291
+
+
+ //Create a new contact
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Charles",
+    "lastName": "Isama",
+    "email": "charles@example.com",
+    "favoriteColor": "Blue",
+    "birthday": "1998-01-01"
+}

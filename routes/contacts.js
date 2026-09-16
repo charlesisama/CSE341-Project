@@ -1,8 +1,12 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const contactsController = require('../controllers/contacts');
+const contactsController = require("../controllers/contacts");
 
-router.get('/contacts', contactsController.getAllContacts);
-router.get('/contacts/:id', contactsController.getContactById);
+// GET all contacts
+router.get("/", contactsController.getAllContacts);
+//
+router.get("/:id", contactsController.getContactById);
+// POST a new contact
+router.post("/", contactsController.createContact);
 
 module.exports = router;

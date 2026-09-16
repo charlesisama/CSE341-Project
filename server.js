@@ -1,20 +1,21 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-const mongodb = require('./data/contactdb');
+const mongodb = require("./data/contactdb");
 
+app.use(express.json());
 
-app.use('/', require('./routes'));
+app.use("/", require("./routes"));
 
 const port = process.env.PORT || 3000;
 
-mongodb.initDb()
+mongodb
+    .initDb()
     .then(() => {
         app.listen(port, () => {
-            console.log('Server is running on port ' + port);
+            console.log("Server is running on port " + port);
         });
     })
     .catch((err) => {
-        console.error('Failed to start server:', err);
+        console.error("Failed to start server:", err);
     });
-
