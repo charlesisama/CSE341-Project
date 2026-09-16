@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
+    "swagger": "node ./swagger-autogen.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
@@ -15,7 +16,8 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "mongodb": "^7.6.0"
+    "mongodb": "^7.6.0",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "eslint": "^10.10.0",
