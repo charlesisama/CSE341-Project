@@ -16,9 +16,13 @@ POST http://localhost:3000/contacts
 Content-Type: application/json
 
 {
-    "firstName": "Charles",
+    "firstName": "Mary",
     "lastName": "Isama",
-    "email": "charles@example.com",
-    "favoriteColor": "Blue",
+    "email": "mary.isama@example.com",
+    "favoriteColor": "Pink",
     "birthday": "1998-01-01"
 }
+
+
+//Delete contact
+DELETE http://localhost:3000/contacts/contactID
