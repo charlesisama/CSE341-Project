@@ -46,7 +46,7 @@ const getContactById = async (req, res) => {
 // Create a new contact
 const createContact = async (req, res) => {
     try {
-        const { firstName, lastName, email, favoriteColor, birthday } = req.body;
+        const { firstName, lastName, email, favoriteColor, birthday } = req.body || {};
 
         if (!firstName || !lastName || !email || !favoriteColor || !birthday) {
             return res.status(400).json({
@@ -86,7 +86,7 @@ const updateContact = async (req, res) => {
     try {
         const contactId = new ObjectId(req.params.id);
 
-        const { firstName, lastName, email, favoriteColor, birthday } = req.body;
+        const { firstName, lastName, email, favoriteColor, birthday } = req.body || {};
 
         if (!firstName || !lastName || !email || !favoriteColor || !birthday) {
             return res.status(400).json({
