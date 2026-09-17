@@ -17,11 +17,11 @@ POST http://localhost:3000/contacts
 Content-Type: application/json
 
 {
-    "firstName": "Mary",
+    "firstName": "John",
     "lastName": "Isama",
-    "email": "mary.isama@example.com",
-    "favoriteColor": "Pink",
-    "birthday": "1998-01-01"
+    "email": "john.isama@example.com",
+    "favoriteColor": "Orange",
+    "birthday": "1998-01-14"
 }
 
 
