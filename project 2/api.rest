@@ -1,0 +1,177 @@
+### Get all students
+GET http://localhost:3000/students
+
+
+### Get student by ID
+GET http://localhost:3000/students/STUDENT_ID
+
+
+### Create student
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+    "firstName": "Charles",
+    "lastName": "Isama",
+    "email": "charles@example.com",
+    "phone": "08012345678",
+    "program": "Software Development",
+    "level": 300,
+    "department": "Computer Science",
+    "enrollmentDate": "2026-01-15",
+    "status": "Active"
+}
+
+
+### Update student
+PUT http://localhost:3000/students/STUDENT_ID
+Content-Type: application/json
+
+{
+    "firstName": "Charles",
+    "lastName": "Isama",
+    "email": "charles@example.com",
+    "phone": "08012345678",
+    "program": "Software Development",
+    "level": 400,
+    "department": "Computer Science",
+    "enrollmentDate": "2026-01-15",
+    "status": "Active"
+}
+
+
+### Delete student
+DELETE http://localhost:3000/students/STUDENT_ID
+
+
+### Get all courses
+GET http://localhost:3000/courses
+
+
+### Get course by ID
+GET http://localhost:3000/courses/COURSE_ID
+
+
+### Create course
+POST http://localhost:3000/courses
+Content-Type: application/json
+
+{
+    "courseCode": "CSE341",
+    "courseName": "Web Services",
+    "description": "Backend web services and REST API development",
+    "credits": 3,
+    "department": "Computer Science",
+    "instructor": "Mr. Hunter Poe",
+    "semester": "Fall 2026"
+}
+
+
+### Update course
+PUT http://localhost:3000/courses/YOUR_COURSE_ID
+Content-Type: application/json
+
+{
+    "courseCode": "CSE341",
+    "courseName": "Advanced Web Services",
+    "description": "Backend web services and REST API development",
+    "credits": 3,
+    "department": "Computer Science",
+    "instructor": "Mr. Hunter Poe",
+    "semester": "Fall 2026"
+}
+
+
+### Delete course
+DELETE http://localhost:3000/courses/COURSE_ID
+
+
+### Create Student 2
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+    "firstName": "Amara",
+    "lastName": "Okafor",
+    "email": "amara.okafor@example.com",
+    "phone": "08123456789",
+    "program": "Computer Science",
+    "level": 200,
+    "department": "Computer Science",
+    "enrollmentDate": "2026-01-15",
+    "status": "Active"
+}
+
+### Create Student 3
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+    "firstName": "Daniel",
+    "lastName": "Adeyemi",
+    "email": "daniel.adeyemi@example.com",
+    "phone": "07098765432",
+    "program": "Information Technology",
+    "level": 400,
+    "department": "Information Technology",
+    "enrollmentDate": "2025-09-10",
+    "status": "Active"
+}
+
+### Create Course 1
+POST http://localhost:3000/courses
+Content-Type: application/json
+
+{
+    "courseCode": "CSE341",
+    "courseName": "Web Services",
+    "description": "Backend web services and REST API development",
+    "credits": 3,
+    "department": "Computer Science",
+    "instructor": "Dr. Michael Smith",
+    "semester": "Fall 2026"
+}
+
+
+### Create Course 2
+POST http://localhost:3000/courses
+Content-Type: application/json
+
+{
+    "courseCode": "CSE340",
+    "courseName": "Web Backend Development",
+    "description": "Server-side programming, databases, and backend application development",
+    "credits": 3,
+    "department": "Computer Science",
+    "instructor": "Dr. Sarah Johnson",
+    "semester": "Fall 2026"
+}
+
+
+### Create Course 3
+POST http://localhost:3000/courses
+Content-Type: application/json
+
+{
+    "courseCode": "WDD330",
+    "courseName": "Web Frontend Development II",
+    "description": "Advanced frontend development using modern JavaScript and browser technologies",
+    "credits": 3,
+    "department": "Web Development",
+    "instructor": "Prof. David Williams",
+    "semester": "Fall 2026"
+}
+
+### Create Course 4
+POST http://localhost:3000/courses
+Content-Type: application/json
+
+{
+    "courseCode": "ITM111",
+    "courseName": "Introduction to Information Technology",
+    "description": "Fundamentals of information technology, computing systems, and digital applications",
+    "credits": 3,
+    "department": "Information Technology",
+    "instructor": "Dr. Emily Brown",
+    "semester": "Fall 2026"
+}
