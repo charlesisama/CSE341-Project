@@ -1,5 +1,7 @@
 const swaggerAutogen = require("swagger-autogen")();
 
+require("dotenv").config();
+
 const doc = {
     info: {
         title: "Student Course Management API",
@@ -7,12 +9,8 @@ const doc = {
             "REST API for managing students and courses in a student course management system.",
         version: "1.0.0"
     },
-    servers: [
-        {
-            url: "https://cse341-project2-api-msn7.onrender.com",
-            description: "Production server"
-        }
-    ]
+    host: process.env.RENDER_EXTERNAL_HOSTNAME || "localhost:3000",
+    schemes: process.env.RENDER_EXTERNAL_HOSTNAME ? ["https"] : ["http"]
 };
 
 const outputFile = "./swagger.json";
