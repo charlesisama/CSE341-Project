@@ -11,7 +11,7 @@ const doc = {
     },
 
     host: isProduction
-        ? "https://cse341-project2-api-msn7.onrender.com"
+        ? "cse341-project2-api-msn7.onrender.com"
         : "localhost:3000",
 
     basePath: "/",
