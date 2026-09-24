@@ -7,8 +7,12 @@ const doc = {
             "REST API for managing students and courses in a student course management system.",
         version: "1.0.0"
     },
-    host: "localhost:3000",
-    schemes: ["http"]
+    servers: [
+        {
+            url: "https://cse341-project2-api-msn7.onrender.com",
+            description: "Production server"
+        }
+    ]
 };
 
 const outputFile = "./swagger.json";
