@@ -1,5 +1,7 @@
 const swaggerAutogen = require("swagger-autogen")();
 
+const isProduction = process.env.RENDER === "true";
+
 const doc = {
     info: {
         title: "Student Course Management API",
@@ -7,9 +9,16 @@ const doc = {
             "REST API for managing students and courses in a student course management system.",
         version: "1.0.0"
     },
-    host: "cse341-project2-api-msn7.onrender.com",
+
+    host: isProduction
+        ? "cse341-project2-api-msn7.onrender.com"
+        : "localhost:3000",
+
     basePath: "/",
-    schemes: ["https"]
+
+    schemes: isProduction
+        ? ["https"]
+        : ["http"]
 };
 
 const outputFile = "./swagger.json";
