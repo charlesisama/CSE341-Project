@@ -6,7 +6,7 @@ const doc = {
     info: {
         title: "Student Course Management API",
         description:
-            "REST API for managing students and courses in a student course management system.",
+            "REST API for managing students and courses with GitHub OAuth authentication.",
         version: "1.0.0"
     },
 
@@ -18,7 +18,17 @@ const doc = {
 
     schemes: isProduction
         ? ["https"]
-        : ["http"]
+        : ["http"],
+
+    securityDefinitions: {
+        githubOAuth: {
+            type: "oauth2",
+            flow: "accessCode",
+            authorizationUrl: "https://github.com/login/oauth/authorize",
+            tokenUrl: "https://github.com/login/oauth/access_token",
+            scopes: {}
+        }
+    }
 };
 
 const outputFile = "./swagger.json";
