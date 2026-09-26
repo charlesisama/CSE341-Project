@@ -43,6 +43,19 @@ passport.deserializeUser((user, done) => {
     done(null, user);
 });
 
+// Define the GitHub callback route
+app.get(
+    "/github/callback",
+    passport.authenticate("github", {
+        failureRedirect: "/api-docs",
+        session: false
+    }),
+    (req, res) => {
+        req.session.user = req.user;
+        res.redirect("/");
+    }
+);
+
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
 
